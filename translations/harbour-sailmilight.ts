@@ -37,42 +37,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="93"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="94"/>
         <source>Rainbow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="99"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="101"/>
         <source>Disco</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="105"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="108"/>
         <source>Pulse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="154"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="158"/>
         <source>Flash red</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="160"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="165"/>
         <source>Flash green</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="166"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="172"/>
         <source>Flash blue</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="218"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="224"/>
         <source>Fade rgbw</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="212"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="218"/>
         <source>Fade white</source>
         <translation type="unfinished"></translation>
     </message>

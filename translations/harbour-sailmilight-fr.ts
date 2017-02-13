@@ -21,7 +21,7 @@
     <message>
         <location filename="../qml/pages/About.qml" line="49"/>
         <source>WiFi controller for various rgbw light bulbs</source>
-        <translation>Contrôleur WiFi pour de nombreuses marques d'ampoule rgbw</translation>
+        <translation>Contrôleur WiFi pour de nombreuses marques d&apos;ampoule rgbw</translation>
     </message>
     <message>
         <location filename="../qml/pages/About.qml" line="58"/>
@@ -37,42 +37,42 @@
         <translation>Effets lumineux</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="93"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="94"/>
         <source>Rainbow</source>
         <translation>Arc-en-ciel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="99"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="101"/>
         <source>Disco</source>
         <translation>Disco</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="105"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="108"/>
         <source>Pulse</source>
         <translation>Impulsion</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="154"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="158"/>
         <source>Flash red</source>
         <translation>Clignotant rouge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="160"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="165"/>
         <source>Flash green</source>
         <translation>Clignotant vert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="166"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="172"/>
         <source>Flash blue</source>
         <translation>Clignotant bleu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="218"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="224"/>
         <source>Fade rgbw</source>
         <translation>Fondu rgbw</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="212"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="218"/>
         <source>Fade white</source>
         <translation>Fondu blanc</translation>
     </message>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="114"/>
         <source>Switch the RGBW bulb ON/OFF</source>
-        <translation>Basculer l'ampoule sur MARCHE/ARRÊT</translation>
+        <translation>Basculer l&apos;ampoule sur MARCHE/ARRÊT</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="127"/>

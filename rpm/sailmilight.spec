@@ -13,11 +13,11 @@ Name:       harbour-sailmilight
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Mi-Light controller over Wifi
-Version:    0.1
-Release:    1
+Version:    0.2
+Release:    0
 Group:      Qt/Qt
 License:    LICENSE
-URL:        http://example.org/
+URL:        https://github.com/a-dekker/sailmilight
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3.0
@@ -72,7 +72,6 @@ desktop-file-install --delete-original       \
 %{_datadir}/icons/hicolor/108x108/apps/%{name}.png
 %{_datadir}/icons/hicolor/128x128/apps/%{name}.png
 %{_datadir}/icons/hicolor/256x256/apps/%{name}.png
-%{_datadir}/%{name}/translations
 /usr/bin
 /usr/share/harbour-sailmilight
 /usr/share/applications

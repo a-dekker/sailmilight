@@ -12,6 +12,11 @@
 # The name of your application
 TARGET = harbour-sailmilight
 
+DEPLOYMENT_PATH = /usr/share/$${TARGET}
+
+translations.files = translations
+translations.path = $${DEPLOYMENT_PATH}
+
 CONFIG += sailfishapp
 
 SOURCES += src/sailmilight.cpp \
@@ -26,15 +31,12 @@ OTHER_FILES += qml/sailmilight.qml \
     qml/pages/call_milight.py \
     rpm/sailmilight.spec \
     rpm/sailmilight.changes \
-    translations/*.ts \
     harbour-sailmilight.desktop \
     python-milight/milight/__init__.py \
     python-milight/milight/rgb.py \
     python-milight/milight/rgbw.py \
     python-milight/milight/white.py \
     python-milight/bridges.py
-
-# INSTALLS += translations
 
 python.files = python-milight/*
 python.path = /usr/share/harbour-sailmilight/python-milight
@@ -51,11 +53,21 @@ icon128.path = /usr/share/icons/hicolor/128x128/apps
 icon256.files += icons/256x256/harbour-sailmilight.png
 icon256.path = /usr/share/icons/hicolor/256x256/apps
 
-INSTALLS += icon86 icon108 icon128 icon256 python
+INSTALLS += icon86 icon108 icon128 icon256 python translations
+
+TRANSLATIONS = translations/harbour-sailmilight-fr.ts \
+               translations/harbour-sailmilight-nl.ts \
 
 # to disable building translations every time, comment out the
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 
+
 HEADERS += \
     src/settings.h
+
+# only include these files for translation:
+lupdate_only {
+    SOURCES = qml/*.qml \
+              qml/pages/*.qml
+}

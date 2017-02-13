@@ -90,18 +90,21 @@ Page {
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Rainbow")
                     color: rainbow.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Disco")
                     color: disco.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Pulse")
                     color: pulse.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
@@ -151,18 +154,21 @@ Page {
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Flash red")
                     color: flash_red.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Flash green")
                     color: flash_green.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
+                    wrapMode: Text.Wrap
                     text: qsTr("Flash blue")
                     color: flash_blue.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
