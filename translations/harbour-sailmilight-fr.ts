@@ -156,7 +156,7 @@
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="107"/>
         <source>Wifi controller</source>
-        <translation>Controleur Wifi</translation>
+        <translation>Contrôleur Wifi</translation>
     </message>
     <message>
         <location filename="../qml/pages/SettingPage.qml" line="123"/>
