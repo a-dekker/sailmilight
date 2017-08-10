@@ -12,6 +12,13 @@ def setcolorWhite(ip, port, zone):
     pyotherside.send('result', '[INFO] white = ON')
 
 
+def setcolorNight(ip, port, zone):
+    controller = milight.MiLight({'host': ip, 'port': int(port)}, wait_duration=0)  # Create a controller with 0 wait between commands
+    light = milight.LightBulb(['rgbw'])  # Can specify which types of bulbs to use
+    controller.send(light.night(int(zone)))
+    pyotherside.send('result', '[INFO] night = ON')
+
+
 def setcolor(ip, port, zone, red, green, blue):
     red = int(red)
     green = int(green)

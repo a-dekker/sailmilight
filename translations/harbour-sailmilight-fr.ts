@@ -32,47 +32,72 @@
 <context>
     <name>EffectsPage</name>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="46"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="40"/>
+        <source>About</source>
+        <translation type="unfinished">À propos</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EffectsPage.qml" line="44"/>
+        <source>Settings</source>
+        <translation type="unfinished">Paramètres</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EffectsPage.qml" line="48"/>
+        <source>Active zone: </source>
+        <translation type="unfinished">Zone activée :</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EffectsPage.qml" line="49"/>
+        <source>all</source>
+        <translation type="unfinished">toutes</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EffectsPage.qml" line="62"/>
         <source>Light effects</source>
         <translation>Effets lumineux</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="94"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="110"/>
         <source>Rainbow</source>
         <translation>Arc-en-ciel</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="101"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="117"/>
         <source>Disco</source>
         <translation>Disco</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="108"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="124"/>
         <source>Pulse</source>
         <translation>Impulsion</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="158"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="174"/>
         <source>Flash red</source>
         <translation>Clignotant rouge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="165"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="181"/>
         <source>Flash green</source>
         <translation>Clignotant vert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="172"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="188"/>
         <source>Flash blue</source>
         <translation>Clignotant bleu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="224"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="243"/>
         <source>Fade rgbw</source>
         <translation>Fondu rgbw</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="218"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="249"/>
+        <source>Night</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/EffectsPage.qml" line="237"/>
         <source>Fade white</source>
         <translation>Fondu blanc</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="nl">
 <context>
     <name>About</name>
     <message>
@@ -66,6 +66,26 @@
         <source>Fade rgbw</source>
         <translation>RGBW gloed</translation>
     </message>
+    <message>
+        <source>Night</source>
+        <translation>Nacht</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Over</translation>
+    </message>
+    <message>
+        <source>Settings</source>
+        <translation>Instellingen</translation>
+    </message>
+    <message>
+        <source>Active zone: </source>
+        <translation>Actieve zone: </translation>
+    </message>
+    <message>
+        <source>all</source>
+        <translation>alle</translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -99,7 +119,7 @@
     </message>
     <message>
         <source>Active zone: </source>
-        <translation>Actieve zone:</translation>
+        <translation>Actieve zone: </translation>
     </message>
     <message>
         <source>Switch the RGBW bulb ON/OFF</source>
@@ -118,11 +138,11 @@
     <name>SettingPage</name>
     <message>
         <source>Discovered IP: </source>
-        <translation>Gevonden IP:</translation>
+        <translation>Gevonden IP: </translation>
     </message>
     <message>
         <source>Corresponding MAC: </source>
-        <translation>Overeenkomstige MAC:</translation>
+        <translation>Overeenkomstige MAC: </translation>
     </message>
     <message>
         <source>Search WiFi bridges</source>

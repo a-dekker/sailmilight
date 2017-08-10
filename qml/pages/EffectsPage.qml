@@ -35,6 +35,22 @@ Page {
 
         clip: true
 
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("About.qml"))
+            }
+            MenuItem {
+                text: qsTr("Settings")
+                onClicked: pageStack.push(Qt.resolvedUrl("SettingPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Active zone: ") + app.active_zone.replace(
+                          "0", qsTr("all"))
+                onClicked: rotateActiveZone()
+            }
+        }
+
         ScrollDecorator {
         }
 
@@ -200,11 +216,14 @@ Page {
                     }
                 }
                 IconButton {
-                    id: white_fade
+                    id: night
+                    height: night.width
                     width: parent.width / 3
-                    height: white_fade.width
+                    icon.source: "../images/night.png"
                     onClicked: {
-                        console.log("dummy")
+                        python.call('call_milight.setcolorNight',
+                                    [app.ip_address, app.port_nbr, app.active_zone],
+                                    function () {})
                     }
                 }
             }
@@ -227,7 +246,8 @@ Page {
                 Label {
                     width: parent.width / 3
                     horizontalAlignment: Text.Center
-                    text: qsTr("")
+                    text: qsTr("Night")
+                    color: rgbw_fade.down ? Theme.secondaryHighlightColor : Theme.primaryColor
                 }
             }
         }
