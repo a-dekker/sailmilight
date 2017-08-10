@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="fr">
 <context>
     <name>About</name>
     <message>
@@ -34,22 +34,22 @@
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="40"/>
         <source>About</source>
-        <translation type="unfinished">À propos</translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="44"/>
         <source>Settings</source>
-        <translation type="unfinished">Paramètres</translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="48"/>
         <source>Active zone: </source>
-        <translation type="unfinished">Zone activée :</translation>
+        <translation>Zone activée : </translation>
     </message>
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="49"/>
         <source>all</source>
-        <translation type="unfinished">toutes</translation>
+        <translation>toutes</translation>
     </message>
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="62"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="249"/>
         <source>Night</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuit</translation>
     </message>
     <message>
         <location filename="../qml/pages/EffectsPage.qml" line="237"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="85"/>
         <source>Active zone: </source>
-        <translation>Zone activée :</translation>
+        <translation>Zone activée : </translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="86"/>
