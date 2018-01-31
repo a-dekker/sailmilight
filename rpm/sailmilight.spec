@@ -20,7 +20,7 @@ License:    LICENSE
 URL:        https://github.com/a-dekker/sailmilight
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.3.0
+Requires:   pyotherside-qml-plugin-python3-qt5 >= 1.5.0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
