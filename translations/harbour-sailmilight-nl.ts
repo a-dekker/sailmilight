@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>WiFi controller for various rgbw light bulbs</source>
-        <translation>Wifi controller voor diverse rgbw lampen</translation>
+        <translation>Wificontroller voor diverse rgbw-lampen</translation>
     </message>
     <message>
         <source>Author</source>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Fade white</source>
-        <translation>Wit gloed</translation>
+        <translation>Witte gloed</translation>
     </message>
     <message>
         <source>Rainbow</source>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Light effects</source>
-        <translation>Licht effecten</translation>
+        <translation>Lichteffecten</translation>
     </message>
     <message>
         <source>Flash blue</source>
@@ -64,7 +64,7 @@
     </message>
     <message>
         <source>Fade rgbw</source>
-        <translation>RGBW gloed</translation>
+        <translation>RGBW-gloed</translation>
     </message>
     <message>
         <source>Night</source>
@@ -123,7 +123,7 @@
     </message>
     <message>
         <source>Switch the RGBW bulb ON/OFF</source>
-        <translation>Schakel RGBW lamp AAN/UIT</translation>
+        <translation>Schakel RGBW-lamp AAN/UIT</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -146,19 +146,19 @@
     </message>
     <message>
         <source>Search WiFi bridges</source>
-        <translation>Zoek WiFi bridge</translation>
+        <translation>Wifibridges zoeken</translation>
     </message>
     <message>
         <source>Port number</source>
-        <translation>Port nummer</translation>
+        <translation>Poortnummer</translation>
     </message>
     <message>
         <source>Wifi controller</source>
-        <translation>Wifi controller</translation>
+        <translation>Wificontroller</translation>
     </message>
     <message>
         <source>IP address</source>
-        <translation>IP adres</translation>
+        <translation>IP-adres</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -166,7 +166,7 @@
     </message>
     <message>
         <source>Invalid IP address</source>
-        <translation>Foutief IP adres</translation>
+        <translation>Foutief IP-adres</translation>
     </message>
 </context>
 </TS>
