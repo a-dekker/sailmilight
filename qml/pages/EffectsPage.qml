@@ -5,9 +5,6 @@ import io.thp.pyotherside 1.5
 Page {
     id: settingsPage
 
-    property bool largeScreen: Screen.sizeCategory === Screen.Large
-                               || Screen.sizeCategory === Screen.ExtraLarge
-
     Python {
         id: python
 
@@ -47,7 +44,7 @@ Page {
             MenuItem {
                 text: qsTr("Active zone: ") + app.active_zone.replace(
                           "0", qsTr("all"))
-                onClicked: rotateActiveZone()
+                onClicked: app.rotateActiveZone()
             }
         }
 
@@ -67,8 +64,9 @@ Page {
                 width: parent.width
                 IconButton {
                     id: rainbow
+                    scale: Screen.width >= 1080 ? 1 : 0.5
                     width: parent.width / 3
-                    height: rainbow.width
+                    height: isPortrait ? rainbow.width : rainbow.width / 3
                     icon.source: "../images/rainbow.png"
                     onClicked: {
                         python.call('call_milight.party',
@@ -78,8 +76,9 @@ Page {
                 }
                 IconButton {
                     id: disco
+                    scale: Screen.width >= 1080 ? 1 : 0.5
                     width: parent.width / 3
-                    height: disco.width
+                    height: isPortrait ? disco.width : disco.width / 3
                     icon.source: "../images/disco.png"
                     onClicked: {
                         python.call('call_milight.party',
@@ -89,8 +88,9 @@ Page {
                 }
                 IconButton {
                     id: pulse
+                    scale: Screen.width >= 1080 ? 1 : 0.5
                     width: parent.width / 3
-                    height: pulse.width
+                    height: isPortrait ? pulse.width : pulse.width / 3
                     icon.source: "../images/pulse.png"
                     onClicked: {
                         python.call('call_milight.party',
@@ -131,7 +131,8 @@ Page {
                 width: parent.width
                 IconButton {
                     id: flash_red
-                    height: flash_red.width
+                    scale: Screen.width >= 1080 ? 1 : 0.5
+                    height: isPortrait ? flash_red.width : flash_red.width / 3
                     width: parent.width / 3
                     icon.source: "../images/bulb-flash-red.png"
                     onClicked: {
@@ -142,7 +143,8 @@ Page {
                 }
                 IconButton {
                     id: flash_green
-                    height: flash_green.width
+                    scale: Screen.width >= 1080 ? 1 : 0.5
+                    height: isPortrait ? flash_green.width : flash_green.width / 3
                     width: parent.width / 3
                     icon.source: "../images/bulb-flash-green.png"
                     onClicked: {
@@ -153,8 +155,9 @@ Page {
                 }
                 IconButton {
                     id: flash_blue
+                    scale: Screen.width >= 1080 ? 1 : 0.5
                     width: parent.width / 3
-                    height: flash_blue.width
+                    height: isPortrait ? flash_blue.width : flash_blue.width / 3
                     icon.source: "../images/bulb-flash-blue.png"
                     onClicked: {
                         python.call('call_milight.party',
@@ -195,7 +198,8 @@ Page {
                 width: parent.width
                 IconButton {
                     id: flash_white
-                    height: flash_white.width
+                    scale: Screen.width >= 1080 ? 1 : 0.5
+                    height: isPortrait ? flash_white.width : flash_white.width / 3
                     width: parent.width / 3
                     icon.source: "../images/bulb-flash-white.png"
                     onClicked: {
@@ -206,7 +210,8 @@ Page {
                 }
                 IconButton {
                     id: rgbw_fade
-                    height: rgbw_fade.width
+                    scale: Screen.width >= 1080 ? 1 : 0.5
+                    height: isPortrait ? rgbw_fade.width : rgbw_fade.width / 3
                     width: parent.width / 3
                     icon.source: "../images/bulb-flash-rgbw.png"
                     onClicked: {
@@ -217,7 +222,8 @@ Page {
                 }
                 IconButton {
                     id: night
-                    height: night.width
+                    scale: Screen.width >= 1080 ? 1 : 0.5
+                    height: isPortrait ? night.width : night.width / 3
                     width: parent.width / 3
                     icon.source: "../images/night.png"
                     onClicked: {

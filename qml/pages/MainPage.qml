@@ -7,6 +7,8 @@ Page {
     id: page
 
     property bool juststarted: true
+    property bool bigScreen: Screen.sizeCategory === Screen.Large
+                               || Screen.sizeCategory === Screen.ExtraLarge
 
     MySettings {
         id: myset
@@ -46,28 +48,6 @@ Page {
         }
     }
 
-    function rotateActiveZone() {
-        switch (app.active_zone) {
-        case "0":
-            app.active_zone = "1"
-            break
-        case "1":
-            app.active_zone = "2"
-            break
-        case "2":
-            app.active_zone = "3"
-            break
-        case "3":
-            app.active_zone = "4"
-            break
-        case "4":
-            app.active_zone = "0"
-            break
-        default:
-            app.active_zone = "0"
-        }
-        console.log("Active zone now " + app.active_zone)
-    }
 
     SilicaFlickable {
         anchors.fill: parent
@@ -84,7 +64,7 @@ Page {
             MenuItem {
                 text: qsTr("Active zone: ") + app.active_zone.replace(
                           "0", qsTr("all"))
-                onClicked: rotateActiveZone()
+                onClicked: app.rotateActiveZone()
             }
         }
         contentHeight: column.height
@@ -130,19 +110,38 @@ Page {
                 }
             }
 
-            Slider {
-                id: dimmer
+            Row {
                 width: parent.width
-                value: 100
-                visible: toggle.checked
-                minimumValue: 0
-                maximumValue: 100
-                stepSize: 1
-                valueText: value.toFixed(0) + " %"
-                label: qsTr("Brightness")
-                onValueChanged: {
-                    update_brightness.restart()
-                    busy.running = true
+                Slider {
+                    id: dimmer
+                    width: isPortrait ? parent.width : parent.width / 2
+                    value: 100
+                    visible: toggle.checked
+                    minimumValue: 0
+                    maximumValue: 100
+                    stepSize: 1
+                    valueText: value.toFixed(0) + " %"
+                    label: qsTr("Brightness")
+                    onValueChanged: {
+                        update_brightness.restart()
+                        busy.running = true
+                    }
+                }
+                Slider {
+                    id: red_landscape
+                    width: parent.width / 2
+                    value: 255
+                    visible: toggle.checked && isLandscape
+                    minimumValue: 0
+                    maximumValue: 255
+                    stepSize: 1
+                    valueText: ((value / 255) * 100).toFixed(0) + " %"
+                    label: qsTr("Red")
+                    onValueChanged: {
+                        update.restart()
+                        red.value = red_landscape.value
+                        busy.running = true
+                    }
                 }
             }
 
@@ -150,7 +149,7 @@ Page {
                 id: red
                 width: parent.width
                 value: 255
-                visible: toggle.checked
+                visible: toggle.checked && isPortrait
                 minimumValue: 0
                 maximumValue: 255
                 stepSize: 1
@@ -158,23 +157,43 @@ Page {
                 label: qsTr("Red")
                 onValueChanged: {
                     update.restart()
+                    red_landscape.value = red.value
                     busy.running = true
                 }
             }
 
-            Slider {
-                id: green
+            Row {
                 width: parent.width
-                value: 255
-                visible: toggle.checked
-                minimumValue: 0
-                maximumValue: 255
-                stepSize: 1
-                valueText: ((value / 255) * 100).toFixed(0) + " %"
-                label: qsTr("Green")
-                onValueChanged: {
-                    update.restart()
-                    busy.running = true
+                Slider {
+                    id: green
+                    width: isPortrait ? parent.width : parent.width / 2
+                    value: 255
+                    visible: toggle.checked
+                    minimumValue: 0
+                    maximumValue: 255
+                    stepSize: 1
+                    valueText: ((value / 255) * 100).toFixed(0) + " %"
+                    label: qsTr("Green")
+                    onValueChanged: {
+                        update.restart()
+                        busy.running = true
+                    }
+                }
+                Slider {
+                    id: blue_landscape
+                    width: parent.width / 2
+                    value: 255
+                    visible: toggle.checked && isLandscape
+                    minimumValue: 0
+                    maximumValue: 255
+                    stepSize: 1
+                    valueText: ((value / 255) * 100).toFixed(0) + " %"
+                    label: qsTr("Blue")
+                    onValueChanged: {
+                        update.restart()
+                        blue.value = blue_landscape.value
+                        busy.running = true
+                    }
                 }
             }
 
@@ -182,7 +201,7 @@ Page {
                 id: blue
                 width: parent.width
                 value: 255
-                visible: toggle.checked
+                visible: toggle.checked && isPortrait
                 minimumValue: 0
                 maximumValue: 255
                 stepSize: 1
@@ -190,6 +209,7 @@ Page {
                 label: qsTr("Blue")
                 onValueChanged: {
                     update.restart()
+                    blue_landscape.value = blue.value
                     busy.running = true
                 }
             }
@@ -207,7 +227,7 @@ Page {
 
             Row {
                 id: colorLine1
-                visible: toggle.checked
+                visible: toggle.checked && (isPortrait || bigScreen)
                 width: parent.width
                 height: width / 6
 
@@ -293,7 +313,7 @@ Page {
 
             Row {
                 id: colorLine2
-                visible: toggle.checked
+                visible: toggle.checked && (isPortrait || bigScreen)
                 width: parent.width
                 height: width / 6
 
@@ -359,6 +379,169 @@ Page {
                 Rectangle {
                     color: "cyan"
                     width: parent.width / 4
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 0
+                            green.value = 255
+                            blue.value = 255
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 0, 255, 255],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+            }
+            Row {
+                id: colorLine_landscape
+                visible: toggle.checked && isLandscape && !bigScreen
+                width: parent.width
+                height: width / 8
+
+                Rectangle {
+                    color: "red"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 255
+                            green.value = 0
+                            blue.value = 0
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 255, 0, 0],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+
+                Rectangle {
+                    color: "green"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 0
+                            green.value = 255
+                            blue.value = 0
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 0, 255, 0],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+
+                Rectangle {
+                    color: "blue"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 0
+                            green.value = 0
+                            blue.value = 255
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 0, 0, 255],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+                Rectangle {
+                    color: "purple"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 153
+                            green.value = 51
+                            blue.value = 255
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 153, 51, 255],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+                Rectangle {
+                    color: "orange"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 255
+                            green.value = 153
+                            blue.value = 51
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 255, 153, 51],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+
+                Rectangle {
+                    color: "yellow"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 255
+                            green.value = 255
+                            blue.value = 0
+                            python.call('call_milight.setcolor',
+                                        [app.ip_address, app.port_nbr, app.active_zone, 255, 255, 0],
+                                        function (red, green, blue) {})
+                            busy.running = true
+                        }
+                    }
+                }
+
+                Rectangle {
+                    color: "white"
+                    width: parent.width / 8
+                    height: parent.height
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            update.stop()
+                            red.value = 255
+                            green.value = 255
+                            blue.value = 255
+                            python.call('call_milight.setcolorWhite',
+                                        [app.ip_address, app.port_nbr, app.active_zone],
+                                        function () {})
+                            busy.running = true
+                        }
+                    }
+                }
+                Rectangle {
+                    color: "cyan"
+                    width: parent.width / 8
                     height: parent.height
 
                     MouseArea {

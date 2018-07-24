@@ -13,8 +13,8 @@ Name:       harbour-sailmilight
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Mi-Light controller over Wifi
-Version:    0.3
-Release:    1
+Version:    0.4
+Release:    0
 Group:      Qt/Qt
 License:    LICENSE
 URL:        https://github.com/a-dekker/sailmilight

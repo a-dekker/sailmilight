@@ -44,7 +44,31 @@ ApplicationWindow
     allowedOrientations: Orientation.Portrait | Orientation.Landscape
                          | Orientation.LandscapeInverted
     _defaultPageOrientations: Orientation.Portrait | Orientation.Landscape
-                         | Orientation.LandscapeInverted
+    | Orientation.LandscapeInverted
+
+    function rotateActiveZone() {
+        switch (active_zone) {
+        case "0":
+            active_zone = "1"
+            break
+        case "1":
+            active_zone = "2"
+            break
+        case "2":
+            active_zone = "3"
+            break
+        case "3":
+            active_zone = "4"
+            break
+        case "4":
+            active_zone = "0"
+            break
+        default:
+            active_zone = "0"
+        }
+
+        console.log("Active zone now " + app.active_zone)
+    }
 
     initialPage: Component { MainPage { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")

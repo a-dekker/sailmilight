@@ -32,27 +32,27 @@
 <context>
     <name>EffectsPage</name>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="40"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="37"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="44"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="41"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="48"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="45"/>
         <source>Active zone: </source>
         <translation>Zone activée : </translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="49"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="46"/>
         <source>all</source>
         <translation>toutes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="62"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="59"/>
         <source>Light effects</source>
         <translation>Effets lumineux</translation>
     </message>
@@ -72,32 +72,32 @@
         <translation>Impulsion</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="174"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="177"/>
         <source>Flash red</source>
         <translation>Clignotant rouge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="181"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="184"/>
         <source>Flash green</source>
         <translation>Clignotant vert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="188"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="191"/>
         <source>Flash blue</source>
         <translation>Clignotant bleu</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="243"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="249"/>
         <source>Fade rgbw</source>
         <translation>Fondu rgbw</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="249"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="255"/>
         <source>Night</source>
         <translation>Nuit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/EffectsPage.qml" line="237"/>
+        <location filename="../qml/pages/EffectsPage.qml" line="243"/>
         <source>Fade white</source>
         <translation>Fondu blanc</translation>
     </message>
@@ -110,58 +110,60 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="77"/>
+        <location filename="../qml/pages/MainPage.qml" line="57"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="81"/>
+        <location filename="../qml/pages/MainPage.qml" line="61"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="85"/>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
         <source>Active zone: </source>
         <translation>Zone activée : </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="86"/>
+        <location filename="../qml/pages/MainPage.qml" line="66"/>
         <source>all</source>
         <translation>toutes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="112"/>
-        <location filename="../qml/pages/MainPage.qml" line="120"/>
+        <location filename="../qml/pages/MainPage.qml" line="92"/>
+        <location filename="../qml/pages/MainPage.qml" line="100"/>
         <source>ON</source>
         <translation>MARCHE</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="114"/>
+        <location filename="../qml/pages/MainPage.qml" line="94"/>
         <source>Switch the RGBW bulb ON/OFF</source>
         <translation>Basculer l&apos;ampoule sur MARCHE/ARRÊT</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="127"/>
+        <location filename="../qml/pages/MainPage.qml" line="107"/>
         <source>OFF</source>
         <translation>ARRÊT</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="142"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Brightness</source>
         <translation>Luminosité</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="158"/>
+        <location filename="../qml/pages/MainPage.qml" line="139"/>
+        <location filename="../qml/pages/MainPage.qml" line="157"/>
         <source>Red</source>
         <translation>Rouge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="174"/>
+        <location filename="../qml/pages/MainPage.qml" line="176"/>
         <source>Green</source>
         <translation>Vert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="190"/>
+        <location filename="../qml/pages/MainPage.qml" line="191"/>
+        <location filename="../qml/pages/MainPage.qml" line="209"/>
         <source>Blue</source>
         <translation>Bleu</translation>
     </message>
