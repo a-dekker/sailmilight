@@ -4,3 +4,8 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-sailmilight
 Exec=harbour-sailmilight
 Name=SailMiLight
+
+[X-Sailjail]
+OrganizationName=org.adekker
+ApplicationName=sailmilight
+Permissions=Internet

@@ -38,6 +38,13 @@ OTHER_FILES += qml/sailmilight.qml \
     python-milight/milight/white.py \
     python-milight/bridges.py
 
+isEmpty(VERSION) {
+    VERSION = $$system( egrep "^Version:\|^Release:" rpm/sailmilight.spec |tr -d "[A-Z][a-z]: " | tr "\\\n" "." | sed "s/\.$//g"| tr -d "[:space:]")
+    message("VERSION is unset, assuming $$VERSION")
+}
+DEFINES += APP_VERSION=\\\"$$VERSION\\\"
+
+
 python.files = python-milight/*
 python.path = /usr/share/harbour-sailmilight/python-milight
 
@@ -50,10 +57,13 @@ icon108.path = /usr/share/icons/hicolor/108x108/apps
 icon128.files += icons/128x128/harbour-sailmilight.png
 icon128.path = /usr/share/icons/hicolor/128x128/apps
 
+icon172.files += icons/172x172/harbour-sailmilight.png
+icon172.path = /usr/share/icons/hicolor/172x172/apps
+
 icon256.files += icons/256x256/harbour-sailmilight.png
 icon256.path = /usr/share/icons/hicolor/256x256/apps
 
-INSTALLS += icon86 icon108 icon128 icon256 python translations
+INSTALLS += icon86 icon108 icon128 icon172 icon256 python translations
 
 TRANSLATIONS = translations/harbour-sailmilight-fr.ts \
                translations/harbour-sailmilight-nl.ts \

@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 
 Page {
@@ -10,8 +10,7 @@ Page {
         contentWidth: parent.width
         contentHeight: col.height
 
-        VerticalScrollDecorator {
-        }
+        VerticalScrollDecorator {}
 
         Column {
             id: col
@@ -66,7 +65,7 @@ Page {
                 visible: isPortrait || (largeScreen && Screen.width > 1080)
             }
             Label {
-                text: "© Arno Dekker 2017"
+                text: "© Arno Dekker 2017-2021"
                 anchors.horizontalCenter: parent.horizontalCenter
             }
             Label {

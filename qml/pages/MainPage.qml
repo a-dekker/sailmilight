@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import harbour.sailmilight.Settings 1.0
 import io.thp.pyotherside 1.5
@@ -8,7 +8,7 @@ Page {
 
     property bool juststarted: true
     property bool bigScreen: Screen.sizeCategory === Screen.Large
-                               || Screen.sizeCategory === Screen.ExtraLarge
+                             || Screen.sizeCategory === Screen.ExtraLarge
 
     MySettings {
         id: myset
@@ -47,7 +47,6 @@ Page {
             pageStack.pushAttached(Qt.resolvedUrl("EffectsPage.qml"))
         }
     }
-
 
     SilicaFlickable {
         anchors.fill: parent
@@ -216,12 +215,11 @@ Page {
 
             Rectangle {
                 width: parent.width
-                height: page.height - header.height - toggle.height
-                        - dimmer.height - red.height - green.height
-                        - blue.height - colorLine1.height - colorLine2.height
-                        > 0 ? page.height - header.height - toggle.height
-                              - dimmer.height - red.height - green.height - blue.height
-                              - colorLine1.height - colorLine2.height : Theme.paddingLarge
+                height: page.height - header.height - toggle.height - dimmer.height - red.height
+                        - green.height - blue.height - colorLine1.height - colorLine2.height
+                        > 0 ? page.height - header.height - toggle.height - dimmer.height
+                              - red.height - green.height - blue.height - colorLine1.height
+                              - colorLine2.height : Theme.paddingLarge
                 color: "transparent"
             }
 

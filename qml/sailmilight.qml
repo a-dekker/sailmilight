@@ -1,3 +1,5 @@
+
+
 /*
   Copyright (C) 2013 Jolla Ltd.
   Contact: Thomas Perl <thomas.perl@jollamobile.com>
@@ -27,13 +29,11 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import "pages"
 
-ApplicationWindow
-{
+ApplicationWindow {
     id: app
     property string name: 'SailMiLight'
     property bool bulb_state: true
@@ -41,10 +41,8 @@ ApplicationWindow
     property string port_nbr: '8899'
     property string active_zone: '0'
 
-    allowedOrientations: Orientation.Portrait | Orientation.Landscape
-                         | Orientation.LandscapeInverted
-    _defaultPageOrientations: Orientation.Portrait | Orientation.Landscape
-    | Orientation.LandscapeInverted
+    allowedOrientations: defaultAllowedOrientations
+    _defaultPageOrientations: defaultAllowedOrientations
 
     function rotateActiveZone() {
         switch (active_zone) {
@@ -70,6 +68,9 @@ ApplicationWindow
         console.log("Active zone now " + app.active_zone)
     }
 
-    initialPage: Component { MainPage { } }
+    initialPage: Component {
+        MainPage {
+        }
+    }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
 }

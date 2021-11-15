@@ -110,60 +110,60 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="57"/>
+        <location filename="../qml/pages/MainPage.qml" line="56"/>
         <source>About</source>
         <translation>À propos</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="61"/>
+        <location filename="../qml/pages/MainPage.qml" line="60"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <location filename="../qml/pages/MainPage.qml" line="64"/>
         <source>Active zone: </source>
         <translation>Zone activée : </translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="66"/>
+        <location filename="../qml/pages/MainPage.qml" line="65"/>
         <source>all</source>
         <translation>toutes</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="92"/>
-        <location filename="../qml/pages/MainPage.qml" line="100"/>
+        <location filename="../qml/pages/MainPage.qml" line="91"/>
+        <location filename="../qml/pages/MainPage.qml" line="99"/>
         <source>ON</source>
         <translation>MARCHE</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="94"/>
+        <location filename="../qml/pages/MainPage.qml" line="93"/>
         <source>Switch the RGBW bulb ON/OFF</source>
         <translation>Basculer l&apos;ampoule sur MARCHE/ARRÊT</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="107"/>
+        <location filename="../qml/pages/MainPage.qml" line="106"/>
         <source>OFF</source>
         <translation>ARRÊT</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="124"/>
+        <location filename="../qml/pages/MainPage.qml" line="123"/>
         <source>Brightness</source>
         <translation>Luminosité</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="139"/>
-        <location filename="../qml/pages/MainPage.qml" line="157"/>
+        <location filename="../qml/pages/MainPage.qml" line="138"/>
+        <location filename="../qml/pages/MainPage.qml" line="156"/>
         <source>Red</source>
         <translation>Rouge</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="176"/>
+        <location filename="../qml/pages/MainPage.qml" line="175"/>
         <source>Green</source>
         <translation>Vert</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="191"/>
-        <location filename="../qml/pages/MainPage.qml" line="209"/>
+        <location filename="../qml/pages/MainPage.qml" line="190"/>
+        <location filename="../qml/pages/MainPage.qml" line="208"/>
         <source>Blue</source>
         <translation>Bleu</translation>
     </message>
@@ -176,37 +176,37 @@
         <translation>Adresse IP invalide</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="104"/>
+        <location filename="../qml/pages/SettingPage.qml" line="103"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="107"/>
+        <location filename="../qml/pages/SettingPage.qml" line="106"/>
         <source>Wifi controller</source>
         <translation>Contrôleur Wifi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="123"/>
+        <location filename="../qml/pages/SettingPage.qml" line="122"/>
         <source>IP address</source>
         <translation>Adresse IP</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="284"/>
+        <location filename="../qml/pages/SettingPage.qml" line="283"/>
         <source>Port number</source>
         <translation>Numéro de port</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="330"/>
+        <location filename="../qml/pages/SettingPage.qml" line="328"/>
         <source>Search WiFi bridges</source>
         <translation>Rechercher les ponts WiFi</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="333"/>
+        <location filename="../qml/pages/SettingPage.qml" line="331"/>
         <source>Discovered IP: </source>
         <translation>IP découverte : </translation>
     </message>
     <message>
-        <location filename="../qml/pages/SettingPage.qml" line="334"/>
+        <location filename="../qml/pages/SettingPage.qml" line="332"/>
         <source>Corresponding MAC: </source>
         <translation>MAC correspondante : </translation>
     </message>

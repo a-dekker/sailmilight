@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 import harbour.sailmilight.Settings 1.0
 import io.thp.pyotherside 1.5
@@ -93,8 +93,7 @@ Page {
 
         clip: true
 
-        ScrollDecorator {
-        }
+        ScrollDecorator {}
 
         Column {
             id: column
@@ -326,7 +325,6 @@ Page {
                 id: searchButton
                 x: Theme.paddingLarge
                 y: Theme.paddingLarge
-                // width: (parent.width / 2) * 0.95
                 text: qsTr("Search WiFi bridges")
                 onClicked: {
                     python.call('call_milight.bridges', [], function (result) {

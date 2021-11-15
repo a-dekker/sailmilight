@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.5
 import Sailfish.Silica 1.0
 
 CoverBackground {
@@ -15,7 +15,7 @@ CoverBackground {
         }
         Image {
             source: largeScreen ? "/usr/share/icons/hicolor/128x128/apps/harbour-sailmilight.png" : "/usr/share/icons/hicolor/86x86/apps/harbour-sailmilight.png"
-           anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
         }
     }
 
@@ -24,12 +24,9 @@ CoverBackground {
 
         CoverAction {
             iconSource: "image://theme/icon-cover-location"
-            onTriggered:
-            {
-                app.bulb_state = !app.bulb_state;
+            onTriggered: {
+                app.bulb_state = !app.bulb_state
             }
         }
     }
 }
-
-
